@@ -1,0 +1,60 @@
+name: smartslides
+description: "SmartSlides - Study smarter. Present better."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  http: ^1.2.1                 # for API calls
+  google_mobile_ads: ^5.1.0     # for AdMob ads
+  path_provider: ^2.1.3         # for finding download folder
+  sqflite: ^2.4.2               # SQLite database
+  path: ^1.9.0                  # path join for db file
+  dio: ^5.4.3                   # for downloading files
+  open_filex: ^4.3.4            # for opening downloaded slides
+  file_picker: ^11.0.2          # for selecting files
+  url_launcher: ^6.3.2          # for external links
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  
+  # Tools for branding and configuration
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.0
+  change_app_package_name: ^1.1.0  # Added this to help you rename easily
+
+# Configuration for App Icon
+flutter_launcher_icons:
+  android: true 
+  ios: true
+  image_path: "assets/logo/SMARTSLIDES.png"
+  min_sdk_android: 21
+
+# Configuration for Native Splash (The screen shown while the engine loads)
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/logo/SMARTSLIDES.png"
+  android_12:
+    color: "#ffffff"
+    icon_backgroundColor: "#ffffff"
+    image: "assets/logo/SMARTSLIDES.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/logo/SMARTSLIDES.png
+    - assets/onboarding/slide1.png
+    - assets/onboarding/slide2.png
+    - assets/onboarding/slide3.png
+    - assets/login_register/
+    - assets/platforms/
