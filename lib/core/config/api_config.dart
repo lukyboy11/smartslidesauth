@@ -9,9 +9,13 @@ class ApiConfig {
   static String get baseUrl {
     if (_override.trim().isNotEmpty) return _override.trim();
 
-    // Default deployed backend.
+    // Presentations / templates API.
     return 'https://smartslides-api.vercel.app';
   }
+
+  /// Auth + tokens API (watch-ad, profile, login…).
+  static String get authBaseUrl =>
+      'https://smartslidessessions.vercel.app/api/auth';
 
   static Map<String, String> get defaultHeaders {
     // Some hosts (proxies/CDNs) behave better with an explicit UA.
